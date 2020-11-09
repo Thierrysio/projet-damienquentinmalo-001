@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projet_damienquentinmalo_001.Utilitaires;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace projet_damienquentinmalo_001.Modeles
             _idProjet = idProjet;
             _intituleProjet = intituleProjet;
             _etat = "pas commence" ;
+            Projet.CollClasseProjet.Add(this);
             _lesCollabs = new List<Collaborateur>();
         }
 
@@ -35,7 +37,18 @@ namespace projet_damienquentinmalo_001.Modeles
 
         #endregion
         #region Attributs Methodes
-
+        public bool ProjetFini()
+        {
+            //Recuperer.RecupererList<Projet>(CollClasseProjet);
+            if(this.Etat == "fini")
+            { 
+                return true; 
+            }
+            else 
+            { 
+                return false;
+            }
+        }
 
         #endregion
 

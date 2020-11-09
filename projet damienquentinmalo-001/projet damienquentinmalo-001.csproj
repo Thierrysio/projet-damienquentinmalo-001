@@ -49,6 +49,7 @@
     <Compile Include="Modeles\Collaborateur.cs" />
     <Compile Include="Modeles\Projet.cs" />
     <Compile Include="Modeles\Service.cs" />
+    <Compile Include="Utilitaires\Recuperer.cs" />
     <Compile Include="Vues\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vues\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
